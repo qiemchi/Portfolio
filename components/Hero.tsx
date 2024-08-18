@@ -37,7 +37,7 @@ const Hero = () => {
                 />
 
                 <p className="text-center md:tracking-wider mb-2 text-sm md:text-lg lg:text-2xl font-bold">
-                    Hi, I'm Qie. A Passionate
+                    Hi, I&apos;m Qie. A Passionate
                 </p>
 
                 <p className="text-center md:tracking-wider mb-4 text-sm md:text-sm lg:text-sm">
