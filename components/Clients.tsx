@@ -6,8 +6,8 @@ const Clients = () => {
   return (
     <div className="py-20" id="testimonials">
         <h1 className="heading mb-10">
-            Kind words from
-            <span className="font-extrabold bg-gradient-to-bl from-purple to-blue-800 bg-clip-text text-transparent leading-normal"> satisfied clients</span>
+            Kind Words from
+            <span className="font-extrabold bg-gradient-to-bl from-purple to-blue-800 bg-clip-text text-transparent leading-normal"> Satisfied Clients</span>
         </h1>
         <div className="flex flex-col items-center max-lg:mt-10">
             <InfiniteMovingCards 
@@ -18,7 +18,7 @@ const Clients = () => {
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg: mt-10">
                 {companies.map(({id, img, name, nameImg }) => (
-                    <div key={id} className='flex md:max-w-60 max-w-32 gap-2'>
+                    <div key={id} className='flex md:max-w-60 max-w-32 gap-4'>
                         <img 
                             src = {img}
                             alt = {name}

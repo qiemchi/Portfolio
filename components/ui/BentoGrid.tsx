@@ -7,7 +7,7 @@ import { useState } from "react";
 import animationData from '@/data/confetti.json';
 import Lottie from "react-lottie";
 import MagicButton from "./MagicButton";
-import { IoCopyOutline } from "react-icons/io5";
+import { IoCopyOutline, IoDownloadOutline } from "react-icons/io5";
 
 export const BentoGrid = ({
   className,
@@ -49,12 +49,15 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const [copied, setCopied] = useState(false);
+  const [downloaded, setDownloaded] = useState(false);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText('qiewifruit@gmail.com');
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '././Qie-CV.pdf'; 
+    link.download = 'Qie-CV.pdf'; 
+    link.click();
 
-    setCopied(true);
+    setDownloaded(true);
   }
 
   return (
@@ -121,7 +124,7 @@ export const BentoGridItem = ({
                   </div>
                   <div className="flex flex-col gap-3 lg:gap-8">
                   <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]"/>
-                      {['PostgreSQL', 'MariaDB', 'Java'].map
+                      {['PostgreSQL', 'Figma', 'Java'].map
                       ((item) => (
                           <span key ={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
                             {item}
@@ -132,11 +135,11 @@ export const BentoGridItem = ({
             )}
 
             {id === 6 && (
-                <div className="mt-5 relative">
+                <div className="mt-2 relative">
                     <div className={`absolute -bottom-5 right-0`}>
                       <Lottie options={{
-                        loop: copied,
-                        autoplay: copied,
+                        loop: downloaded,
+                        autoplay: downloaded,
                         animationData,
                         rendererSettings: {
                           preserveAspectRatio: 'xMidYMid slice',
@@ -145,10 +148,10 @@ export const BentoGridItem = ({
                     </div>
 
                     <MagicButton 
-                      title={copied ? 'Email Copied' : 'Copy my Email'}
-                      icon={<IoCopyOutline/>}
+                      title={downloaded ? 'CV Downloaded' : 'Download My CV'}
+                      icon={<IoDownloadOutline/>}
                       position="left"
-                      handleClick={handleCopy}
+                      handleClick={handleDownload}
                     />
                 </div>
             )}

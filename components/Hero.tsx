@@ -14,6 +14,8 @@ const Hero = () => {
             fill="purple" />
             <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]"
             fill="blue" />
+            <Spotlight className="top-50 left-full h-[120vh] w-[50vw]
+            " fill="white" />
         </div>
 
         <div className="h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.03] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0">
@@ -26,7 +28,7 @@ const Hero = () => {
             <div className = 'max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex-col items-center justify-center'>
                 <h2 className = 
                 "uppercase tracking-widest text-xs text-center text-blue-100 max-w">
-                    A Website Portfolio
+                    Website Portfolio
                 </h2>
 
                 <TextGenerateEffect
@@ -34,13 +36,17 @@ const Hero = () => {
                     words = "Transforming Concept into Seamless User Experiences"
                 />
 
-                <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-                    Hi, I'm Qie, an IST Student from Indonesia.
+                <p className="text-center md:tracking-wider mb-2 text-sm md:text-lg lg:text-2xl font-bold">
+                    Hi, I'm Qie. A Passionate
+                </p>
+
+                <p className="text-center md:tracking-wider mb-4 text-sm md:text-sm lg:text-sm">
+                    UI/UX Designer | Software Engineer
                 </p>
 
                 <a href = "#about" className='flex justify-center'>
                     <MagicButton 
-                        title="Show my work" 
+                        title="Get to Know Me" 
                         icon={<FaLocationArrow />} 
                         position= 'right' />
                 </a>
