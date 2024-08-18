@@ -15,7 +15,9 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems= {navItems} />
         <Hero />
-        <Grid />
+        <div className="pt-20">
+          <Grid />
+        </div>
         <RecentProjects />
         <Clients />
         <Experience />
